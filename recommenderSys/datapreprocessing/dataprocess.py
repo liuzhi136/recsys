@@ -105,11 +105,14 @@ def store_dictData(data, toFile):
             dicthandle.write(line + "\n");
             
 if __name__ == '__main__':
-    data = formatData('data/ijcai2016_koubei_train')
-    location_merchant = pickle.load(open('data/location_merchant', 'rb'))
-    location_merchant_rate = calculateRateInLocation(location_merchant, data)
-    storeData(location_merchant_rate, 'data/location_merchant_rate_text')
-    pickle.dump(location_merchant_rate, open('data/location_merchant_rate', 'wb'))
+#     data = formatData('data/ijcai2016_koubei_train')
+#     data.pop(0)
+#     location_merchant = pickle.load(open('data/location_merchant', 'rb'))
+#     location_merchant_rate = calculateRateInLocation(location_merchant, data)
+#     storeData(location_merchant_rate, 'data/location_merchant_rate_text')
+#     pickle.dump(location_merchant_rate, open('data/location_merchant_rate', 'wb'))
+    location_merchant_rate = pickle.load( open('data/location_merchant_rate', 'rb'))
+    
 #     with open('data/merchantIds','rb') as merchantshandle:
 #         merchants = pickle.load(merchantshandle)
 #     merchants = [int(merchant) for merchant in merchants]
